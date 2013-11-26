@@ -1,0 +1,28 @@
+<h1>Listing comments</h1>
+
+<%= paginate @comments %>
+<table>
+  <tr>
+    <th>Comment body</th>
+    <th>Submission date</th>
+    <th>Tale</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+<% @comments.each do |comment| %>
+  <tr>
+    <td><%= comment.comment_body %></td>
+    <td><%= comment.submission_date %></td>
+    <td><%= comment.tale_id %></td>
+    <td><%= comment.user_id %></td>
+    <td><%= link_to 'Show', comment %></td>
+    <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New Comment', new_comment_path %>
+<%= link_to 'Back', tales_path %>

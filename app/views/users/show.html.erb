@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+<%= javascript_include_tag :defaults %>
+
+<table width="100%", border="1">
+ <tr>
+  <th scope="row" align="left"> User Name</th>
+  <td width="71"><%= @user.user_name %></td>
+</tr>
+
+<tr>
+ <th scope="row" align="left">Password</th>
+ <td><%= best_in_place @user, :encrypted_password %></td>
+</tr>
+
+<tr>
+ <th scope="row" align="left">First name:</th>
+  <td><%= @user.first_name %></td>
+</tr>
+
+<tr>
+<th scope="row" align="left">Last name:</th>
+ <td><%= @user.last_name %></td>
+</tr>
+
+<tr>
+<th scope="row" align="left">Age:</th>
+ <td><%= @user.age %></td>
+</tr>
+
+<tr>
+<th scope="row" align="left">Email:</th>
+ <td><%= @user.email %></td>
+</tr>
+
+<tr>
+<th scope="row" align="left">Country:</th>
+ <td><%= @user.country %></td>
+</tr>
+
+<tr>
+<th scope="row" align="left">&nbsp;</th>
+ <td>&nbsp</td>
+</tr>
+
+
+<tr><%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %></tr>
+
+</table>
+
+<%= render 'search_result' %>

@@ -1,0 +1,15 @@
+# encoding: ASCII-8BIT
+
+<h1>Add Tag</h1>
+
+<p><label for="tag_tale_title">Title of the Tale:</label>
+<%= @tale.title %></p>
+<br/>
+
+<p><label for="tag_name">Tag</label>
+<%= text_field 'tag', 'name' %></p>
+<br/> 
+
+<%= submit_tag 'Add tag', {:controller => 'tags', :method => 'post'} %>
+
+<%= link_to 'Back', :controller => 'tales', :action => 'index' %>

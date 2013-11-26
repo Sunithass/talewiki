@@ -1,0 +1,17 @@
+<h1>Listing Tags</h1>
+<table>
+  <tr>
+    <th>Tag</th>
+        
+  </tr>
+
+<% @tags.each do |tag| %>
+  <tr>
+    <td><%= tag.name %></td>
+   
+    
+    </tr>
+<% end %>
+
+</table>
+<%= link_to 'Back', :action => 'tales/index' %>

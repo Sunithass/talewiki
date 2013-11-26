@@ -1,0 +1,15 @@
+<html>
+<head>
+<style>
+ .cssSmall { font-size: 1.0em; }
+ .cssMedium { font-size: 1.2em; }
+ .cssMedium { font-size: 1.4em; }
+ .cssLarge { font-size: 1.6em; }
+</style>
+</head>
+<body>
+<% tag_clouds @tags, %w(cssSmall cssMedium cssNormal cssLarge) do |tag, css_class| %>
+ <%= link_to tag.name, { :action => "result_search", :id => tag.name }, :class => css_class %>
+<% end %>
+</body>
+</html>

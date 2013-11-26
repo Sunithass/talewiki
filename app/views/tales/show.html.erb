@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @tale.title %>
+</p>
+
+<p>
+  <b>Body text:</b>
+  <%= @tale.body_text %>
+</p>
+
+<p>
+  <b>Submission date:</b>
+  <%= @tale.submission_date %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @tale.source %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @tale.status %>
+</p>
+<p>
+  <b>Tag:</b>
+  <%= @tale.tag_list %>
+</p>
+
+<%= link_to 'Edit', edit_tale_path(@tale) %> |
+<%= link_to 'Back', tales_path %>
+<%= link_to 'Add Comment', :controller=>'comments', :action => 'new', :id => @tale.id %>
+<%= link_to 'View Comments', :controller=>'comments', :action => 'index', :id => @tale.id %>
+<%= link_to 'Add tags', :controller=>'tags', :action => 'new', :id => @tale.id %>

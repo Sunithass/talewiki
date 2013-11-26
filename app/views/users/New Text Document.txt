@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>Talewiki</title>
+<head>
+<%= stylesheet_link_tag "basic", :media => "all" %>
+</head>
+
+<body>
+<div class="talewikiheader">
+<div align="center">
+<img src="/images/talewiki.jpg" alt="[TaleWiki]">
+</div>
+</div>
+<hr>
+<%= form_tag :action => 'authenticate' %>
+<div>
+<center>
+<table border=1><tr><td>
+<table border=0 cellspacing=0>
+<tr>
+<td colspan=2 class="tabletitle">
+<b>Please enter your user information</b>
+</td>
+</tr>
+<tr>
+<td align="right">User name:</td>
+<td><%= text_field("user", "user_name",:size=>"15" ) %></td>
+</tr>
+<tr>
+<td align="right">Password:</td>
+<td><%= password_field("user", "encrypted_password",:size=>"15" ) %></td>
+</tr>
+<tr>
+<td colspan=2 align="center">
+<HR>
+<input type="submit" value=" Login " ></td>
+</tr>
+</table>
+</td></tr></table>
+</center>
+</div>
+  <hr>
+<div class="talewikifooter">
+</div>
+</body>
+</html>

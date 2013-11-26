@@ -1,0 +1,15 @@
+<html>
+<head>
+<%= javascript_incude_tag (:defaults) %>
+</head>
+<body>
+<h1>Search By Tag</h1>
+<% form_tag :action => 'search_result'  %>
+
+<label for="tag_name">Tag</label>
+<%= text_field_with_auto_complete :user, :user_name %>
+ 
+  <%= submit_tag "Search" %>
+<% end %>
+</body>
+</html> 

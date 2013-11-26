@@ -1,0 +1,23 @@
+<h1>Search Result</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body text</th>
+    <th>Submission date</th>
+    <th>Source</th>
+    <th>Status</th>
+    
+  </tr>
+
+<% @tales.each do |tale| %>
+  <tr>
+    <td><%= tale.title %></td>
+    <td><%= tale.body_text %></td>
+    <td><%= tale.submission_date %></td>
+    <td><%= tale.source %></td>
+    <td><%= tale.status %></td>
+    <td><%= link_to 'Show', :action => 'show', :id => tale %></td>
+    </tr>
+<% end %>
+
+</table>

@@ -1,0 +1,25 @@
+<table width="100%">
+<tr>
+<td><b> Tale Details</b></td>
+</tr>
+</table>
+<table width="100%" border="1">
+<tr>
+<th width="11%" scope="col" align="left">Title</th>
+<th width="10%" scope="col" align="left">Tale</th>
+<th width="30%" scope="col" align="left">Submission Date </th>
+<th width="21%" scope="col" align="left">Source</th>
+<th width="14%" scope="col" align="left">Status</th>
+<th width="14%" scope="col" align="left">Genre</th>
+</tr>
+<% @tales.each do |tale| %>
+<tr>
+<td><%=tale.title%></td>
+<td><%=tale.body_text%></td>
+<td><%=tale.submission_date%></td>
+<td><%=tale.source%></td>
+<td><%=tale.status%></td>
+<td><%=tale.genre.genre_name%></td>
+</tr>
+<%end%>
+</table>

@@ -1,0 +1,26 @@
+BODY { background-color: #ffffff;}
+
+BODY, P, TD, OPTION, SELECT, INPUT, TEXTAREA { font-size: .98em; }
+
+PRE { font-size: 0.9em; }
+
+BODY, P, TD, OPTION, SELECT { font-family: Arial, Helvetica, sans-serif; }
+
+PRE, TEXTAREA { font-family: monospace; }
+
+INPUT { font-family: Arial, Helvetica, sans-serif; }
+
+HR { }
+
+A { text-decoration: underline; }
+
+A:link { color: #0000ff; }
+
+A:visited { color: #0000ff; }
+
+A:active { color: #C01010; }
+
+.talewikiheader { text-align: right; }
+
+.talewikifooter { text-align: right; }
+   
